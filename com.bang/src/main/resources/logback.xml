@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+	<!-- Leave log at console -->
+	<appender name="consoleAppender"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<!-- Log message pattern -->
+			<Pattern>
+				%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n
+			</Pattern>
+		</encoder>
+	</appender>
+
+	<!-- Leave log at file -->
+	<appender name="fileAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/Users/com.bangtae/git/repository/com.bang/webapp/log/com-bang.log</file>
+		<encoder
+			class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+				%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n
+			</Pattern>
+		</encoder>
+
+		<!-- If exceeds log file size of 10kb, creation .zip file and creation new log file policy -->
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>10KB</MaxFileSize>
+		</triggeringPolicy>
+
+		<!-- Overwritten file policy -->
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<FileNamePattern>/Users/com.bangtae/git/repository/com.bang/webapp/log/com-bang_%i.log.zip
+			</FileNamePattern>
+			<MinIndex>1</MinIndex>
+			<MaxIndex>10</MaxIndex>
+		</rollingPolicy>
+	</appender>
+
+<!-- 	<logger name="com.bang" level="info"
+		additivity="false">
+		<appender-ref ref="fileAppender" />
+	</logger> -->
+
+	<root name="com.bang" level="info">
+		<appender-ref ref="consoleAppender" />
+	</root>
+</configuration>

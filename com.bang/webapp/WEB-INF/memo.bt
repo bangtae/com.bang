@@ -1,0 +1,23 @@
+1. Configuration Environment
+Eclipse: 2018-12 (4.10.0)
+JAVA: jdk1.8.0_65
+Tomcat: apache-tomcat-8.5.37
+
+2. Setting Dynamic Web Project -> Maven -> Spring
+[Spring] 스프링 시작 (2) - Hello World ! - https://victorydntmd.tistory.com/158?category=698080
+
+3. Configuration Spring
+[Spring] 자바 코드 기반 설정 - https://devbox.tistory.com/entry/Spring-%EC%9E%90%EB%B0%94-%EC%BD%94%EB%93%9C-%EA%B8%B0%EB%B0%98-%EC%84%A4%EC%A0%95
+
+3_1. Configuration REST
+Spring REST json example – Spring RESTful webservices example - https://howtodoinjava.com/spring-restful/spring-rest-hello-world-json-example/
+Spring MVC - JSON Mapping View - https://www.logicbig.com/tutorials/spring-framework/spring-web-mvc/json-view.html
+
+3_2. Configuration Logging
+[Spring] 로그 남기기 ( Logback ) - https://victorydntmd.tistory.com/m/173
+
+3.3. UI Framework 설치(OpenUI5)_20190821
+
+Example 1. JCO
+sapjco3.jar, pom.xml의 sap-jco-manager를 사용한 SAP Remote Function Call
+https://gs.saro.me/dev?page=5&tn=562
