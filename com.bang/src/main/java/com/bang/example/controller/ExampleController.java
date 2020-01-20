@@ -20,7 +20,7 @@ import com.sap.conn.jco.JCoException;
 @Controller
 public class ExampleController {
 	private static final Log logger = LogFactory.getLog( ExampleController.class );
-	
+	 
 	@Autowired
 	ExampleService exampleService;
 	
